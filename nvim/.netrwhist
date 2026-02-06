@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/var/vm/units/OSX-KVM'
+let g:netrw_dirhist_2='/home/ilya/.config/autorandr'
+let g:netrw_dirhist_1='/home/ilya/.config/google-chrome/Default'
