@@ -40,4 +40,5 @@ Map("t", "<C-l>", "<cmd>wincmd l<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- down 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- up
 Map("v", "<", "<gv") -- tab left
+Map("i", "<S-Tab>", "<cmd><gv<CR>") -- tab left
 Map("v", ">", ">gv") -- tab right
