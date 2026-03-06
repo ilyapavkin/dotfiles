@@ -11,7 +11,7 @@
   "mason.nvim": { "branch": "main", "commit": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65" },
   "mini.icons": { "branch": "main", "commit": "5b9076dae1bfbe47ba4a14bc8b967cde0ab5d77e" },
   "mini.nvim": { "branch": "main", "commit": "cad365c212fb1e332cb93fa8f72697125799d00a" },
-  "nvim-lspconfig": { "branch": "master", "commit": "2b87d107942b9eebef768512f5849330335a9493" },
+  "nvim-lspconfig": { "branch": "master", "commit": "2163c54bb6cfec53e3e555665ada945b8c8331b9" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-web-devicons": { "branch": "master", "commit": "737cf6c657898d0c697311d79d361288a1343d50" },
   "oil.nvim": { "branch": "master", "commit": "0fcc83805ad11cf714a949c98c605ed717e0b83e" },
@@ -20,6 +20,7 @@
   "rose-pine": { "branch": "main", "commit": "cf2a288696b03d0934da713d66c6d71557b5c997" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c" },
   "telescope.nvim": { "branch": "master", "commit": "3333a52ff548ba0a68af6d8da1e54f9cd96e9179" },
+  "typescript-tools.nvim": { "branch": "master", "commit": "c2f5910074103705661e9651aa841e0d7eea9932" },
   "undotree": { "branch": "master", "commit": "d8f99084d98c32f651860eb0baaf89759f91debc" },
   "vim-fugitive": { "branch": "master", "commit": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }

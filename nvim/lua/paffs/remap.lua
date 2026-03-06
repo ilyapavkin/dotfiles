@@ -24,6 +24,11 @@ disableArrows("v")
 --vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("", "<ESC>u", "<cmd>nohlsearch<CR>")
 
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-f>", "<C-f>zz")
+vim.keymap.set("n", "<C-b>", "<C-b>zz")
+
 -- window navigation
 Map("n", "<C-h>", "<C-w>h")
 Map("n", "<C-j>", "<C-w>j")
@@ -40,5 +45,8 @@ Map("t", "<C-l>", "<cmd>wincmd l<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- down 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- up
 Map("v", "<", "<gv") -- tab left
-Map("i", "<S-Tab>", "<cmd><gv<CR>") -- tab left
 Map("v", ">", ">gv") -- tab right
+
+-- yank/put outside
+Map("v", "<C-S-c>", "+y")
+Map("v", "<C-S-v>", "+p")
