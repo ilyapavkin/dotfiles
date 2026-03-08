@@ -14,6 +14,11 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.colorcolumn = "80"
+
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking text",
   callback = function()

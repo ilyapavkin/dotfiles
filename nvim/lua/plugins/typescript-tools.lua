@@ -4,7 +4,7 @@ return {
   opts = {
     settings = {
       -- spawn additional tsserver instance to calculate diagnostics on it
-      separate_diagnostic_server = true,
+      separate_diagnostic_server = false,
       -- "change"|"insert_leave" determine when the client asks the server about diagnostic
       publish_diagnostic_on = "insert_leave",
       -- array of strings("fix_all"|"add_missing_imports"|"remove_unused"|
@@ -43,7 +43,7 @@ return {
       -- WARNING: it is disabled by default (maybe you configuration or distro already uses nvim-ts-autotag,
       -- that maybe have a conflict if enable this feature. )
       jsx_close_tag = {
-        enable = false,
+        enable = true,
         filetypes = { "javascriptreact", "typescriptreact" },
       }
     }
