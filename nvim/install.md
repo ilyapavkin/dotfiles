@@ -1,0 +1,2 @@
+## Install following:
+- ripgrep
