@@ -10,12 +10,12 @@ local local_plugins = {
 				md_files = {
 					"AGENTS.md",
 				},
-				completion = {
-					-- custom_rules = {
-					--   "~/personal/skills/skills/",
-					-- },
-					source = "blink",
-				},
+				-- completion = {
+				-- 	custom_rules = {
+				-- 		"~/skills/",
+				-- 	},
+				-- 	source = "blink",
+				-- },
 				model = "qwen-coder-plus",
 			})
 			vim.keymap.set("n", "<leader>9s", function()
