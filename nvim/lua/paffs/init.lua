@@ -1,7 +1,7 @@
 require("config.lazy")
 require("config.lsp")
 require("paffs.remap")
-require('lualine').setup()
+require("lualine").setup()
 require("paffs.colors")
 
 vim.opt.number = true
@@ -14,16 +14,16 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.colorcolumn = "80"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking text",
-  callback = function()
-    vim.highlight.on_yank({
-      timeout = 150,
-    })
-  end,
+	desc = "Highlight when yanking text",
+	callback = function()
+		vim.highlight.on_yank({
+			timeout = 150,
+		})
+	end,
 })

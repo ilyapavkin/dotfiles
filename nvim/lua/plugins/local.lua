@@ -10,23 +10,20 @@ local local_plugins = {
 				md_files = {
 					"AGENTS.md",
 				},
-				-- completion = {
-				-- 	custom_rules = {
-				-- 		"~/skills/",
-				-- 	},
-				-- 	source = "blink",
-				-- },
+				completion = {
+					custom_rules = {
+						"~/skills/",
+					},
+					source = "blink",
+				},
 				model = "qwen-coder-plus",
 			})
 			vim.keymap.set("n", "<leader>9s", function()
 				_99.search()
 			end, { desc = "99 search" })
-			vim.keymap.set("v", "<leader>9vv", function()
+			vim.keymap.set("v", "<leader>9v", function()
 				_99.visual()
 			end, { desc = "99 visual" })
-			vim.keymap.set("v", "<leader>9vp", function()
-				_99.visual_prompt()
-			end, { desc = "99 visual prompt" })
 			vim.keymap.set("n", "<leader>9x", function()
 				_99.stop_all_requests()
 			end, { desc = "99 stop all" })
