@@ -1,4 +1,5 @@
 font-size=11
+mouse-scroll-multiplier=0.25
 
 keybind=clear
 keybind= ctrl+shift+,=reload_config
