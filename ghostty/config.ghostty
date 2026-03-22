@@ -31,7 +31,7 @@ keybind= ctrl+z=toggle_split_zoom
 keybind= ctrl+a>x=close_surface
 
 keybind= ctrl+shift+f=start_search
-keybind= escape=end_search
+keybind= ctrl+shift+escape=end_search
 keybind= ctrl+shift+a=select_all
 keybind= ctrl++=increase_font_size:1
 keybind= ctrl+==increase_font_size:1

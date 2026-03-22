@@ -1,25 +1,24 @@
 vim.g.mapleader = " "
 
 function Map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
+	local options = { noremap = true, silent = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.keymap.set(mode, lhs, rhs, options)
 end
 
 local function disableArrows(mode)
-  Map(mode, '<Up>', '<Nop>')
-  Map(mode, '<Down>', '<Nop>')
-  Map(mode, '<Left>', '<Nop>')
-  Map(mode, '<Right>', '<Nop>')
+	Map(mode, "<Up>", "<Nop>")
+	Map(mode, "<Down>", "<Nop>")
+	Map(mode, "<Left>", "<Nop>")
+	Map(mode, "<Right>", "<Nop>")
 end
 
 disableArrows("n")
 disableArrows("c")
 disableArrows("v")
 --disableArrows("i")
-
 
 --vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("", "<ESC>u", "<cmd>nohlsearch<CR>")
@@ -30,19 +29,19 @@ vim.keymap.set("n", "<C-f>", "<C-f>zz")
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
 
 -- window navigation
-Map("n", "<C-h>", "<C-w>h")
-Map("n", "<C-j>", "<C-w>j")
-Map("n", "<C-k>", "<C-w>k")
-Map("n", "<C-l>", "<C-w>l")
+Map("n", "<M-h>", "<C-w>h")
+Map("n", "<M-j>", "<C-w>j")
+Map("n", "<M-k>", "<C-w>k")
+Map("n", "<M-l>", "<C-w>l")
 
 -- terminal
-Map("t", "<C-h>", "<cmd>wincmd h<CR>")
-Map("t", "<C-j>", "<cmd>wincmd j<CR>")
-Map("t", "<C-k>", "<cmd>wincmd k<CR>")
-Map("t", "<C-l>", "<cmd>wincmd l<CR>")
+Map("t", "<M-h>", "<cmd>wincmd h<CR>")
+Map("t", "<M-j>", "<cmd>wincmd j<CR>")
+Map("t", "<M-k>", "<cmd>wincmd k<CR>")
+Map("t", "<M-l>", "<cmd>wincmd l<CR>")
 
 -- move vis block:
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- down 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- down
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- up
 Map("v", "<", "<gv") -- tab left
 Map("v", ">", ">gv") -- tab right
