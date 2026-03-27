@@ -49,3 +49,6 @@ Map("v", ">", ">gv") -- tab right
 -- yank/put outside
 Map("v", "<C-S-c>", "+y")
 Map("v", "<C-S-v>", "+p")
+
+-- Panic
+Map("n", "<leader>qqq", ":bd|e#|bd#")

@@ -1,14 +1,47 @@
 return {
 	{
 		"mason-org/mason.nvim",
-		config = true,
-		opts = {},
+		dependencies = {
+			"artemave/workspace-diagnostics.nvim",
+		},
+		opts = {
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
+				},
+			},
+			servers = {
+				lua_ls = {
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim" },
+							},
+						},
+					},
+				},
+				ts_ls = {
+					on_attach = function(client, buffer)
+						require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)
+					end,
+				},
+			},
+		},
+		config = function(_, opts)
+			require("mason").setup()
+			for server, config in pairs(opts.servers) do
+				vim.lsp.config(server, config)
+				vim.lsp.enable(server)
+			end
+		end,
 	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		config = true,
 		opts = {
-			ensure_installed = { "lua_ls", "cssls" },
+			ensure_installed = { "lua_ls", "cssls", "ts_ls", "eslint" },
 		},
 	},
 	{
