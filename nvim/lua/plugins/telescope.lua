@@ -35,6 +35,7 @@ return {
 			vim.keymap.set("n", "<leader>ca", function()
 				vim.lsp.buf.code_action({ apply = true })
 			end, { desc = "Telescope code actions" })
+			vim.keymap.set("n", "<leader>td", ":TodoTelescope<CR>", { desc = "Telescope todo" })
 		end,
 	},
 }
