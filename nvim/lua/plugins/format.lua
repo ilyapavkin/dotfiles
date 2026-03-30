@@ -5,7 +5,7 @@ return {
 		config = function()
 			require("conform").setup({
 				format_on_save = {
-					timeout_ms = 5000,
+					timeout_ms = 500,
 					lsp_format = "fallback",
 				},
 				formatters_by_ft = {
@@ -13,11 +13,11 @@ return {
 					cpp = { "clang-format" },
 					lua = { "stylua" },
 					go = { "gofmt" },
-					javascript = { "prettierd" },
-					javascriptreact = { "prettierd" },
-					typescript = { "prettierd" },
-					typescriptreact = { "prettierd" },
-					json = { "prettierd" },
+					javascript = { "prettierd", "eslint_d" },
+					javascriptreact = { "prettierd", "eslint_d" },
+					typescript = { "prettierd", "eslint_d" },
+					typescriptreact = { "prettierd", "eslint_d" },
+					json = { "prettierd", "eslint_d" },
 				},
 				formatters = {
 					["clang-format"] = {
