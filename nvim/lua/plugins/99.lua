@@ -16,7 +16,6 @@ return {
 				},
 				source = "blink",
 			},
-			model = "qwen-coder-plus",
 		})
 		vim.keymap.set("n", "<leader>9s", function()
 			_99.search()
