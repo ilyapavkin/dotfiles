@@ -17,6 +17,9 @@ return {
 				E = { text = "E", prio = 0 },
 			},
 		},
+		keys = {
+			{ "<leader>??", ":Precognition toggle<CR>", mode = { "n" } },
+		},
 	},
 	{
 		"chrisgrieser/nvim-spider",

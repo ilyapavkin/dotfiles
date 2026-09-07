@@ -5,7 +5,9 @@ return {
 	config = function()
 		local _99 = require("99")
 		_99.setup({
-			provider = _99.Providers.GeminiCLIProvider,
+			provider = _99.Providers.OpenCodeProvider,
+			--			model = "llama.cpp/gemma-4-12B-agentic",
+			model = "openai/gpt-5.6-fast",
 			show_in_flight_requests = true,
 			md_files = {
 				"AGENTS.md",
@@ -37,6 +39,9 @@ return {
 		end)
 		vim.keymap.set("n", "<leader>9p", function()
 			_99.prev_request_logs()
+		end)
+		vim.keymap.set("n", "<leader>9P", function()
+			require("99.extensions.telescope").select_provider()
 		end)
 	end,
 }

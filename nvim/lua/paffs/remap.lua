@@ -33,6 +33,10 @@ Map("n", "<M-h>", "<C-w>h")
 Map("n", "<M-j>", "<C-w>j")
 Map("n", "<M-k>", "<C-w>k")
 Map("n", "<M-l>", "<C-w>l")
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+Map("n", "<M-S-'>", "<cmd>sp .<CR>")
+Map("n", "<M-S-5>", ":vsplit .<CR>")
 
 -- terminal
 Map("t", "<M-h>", "<cmd>wincmd h<CR>")
