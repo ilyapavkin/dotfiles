@@ -28,11 +28,28 @@
 -- Load Lua modules from the physical hypr.d directory in lexical order.
 -- The hypr_d name is the logical module grouping; the directory remains hypr.d.
 local hypr_d_dir = os.getenv("HOME") .. "/.config/hypr/hypr.d"
-package.path = hypr_d_dir .. "/?.lua;" .. package.path
 
-local modules = assert(io.popen("find " .. string.format("%q", hypr_d_dir) .. " -maxdepth 1 -type f -name '*.lua' -printf '%f\\n' | sort"))
-for module_file in modules:lines() do
-	local module = module_file:gsub("%.lua$", "")
-	require(module)
+local function load_modules(directory)
+	local modules = assert(io.popen(
+		"find " .. string.format("%q", directory) .. " -maxdepth 1 -type f -name '*.lua' -printf '%f\\n' 2>/dev/null | sort"
+	))
+	for module_file in modules:lines() do
+		dofile(directory .. "/" .. module_file)
+	end
+	modules:close()
 end
-modules:close()
+
+load_modules(hypr_d_dir)
+
+-- Host-specific modules are optional and load after common modules.
+local hostname = os.getenv("HOSTNAME") or ""
+if hostname == "" then
+	local hostname_file = io.open("/etc/hostname", "r")
+	if hostname_file then
+		hostname = hostname_file:read("*l") or ""
+		hostname_file:close()
+	end
+end
+if hostname:match("^[%w][%w%._-]*$") then
+	load_modules(hypr_d_dir .. "/" .. hostname)
+end

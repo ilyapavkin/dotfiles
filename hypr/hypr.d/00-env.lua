@@ -10,9 +10,6 @@ hl.config({
 	},
 })
 
--- env = AQ_DRM_DEVICES,/dev/dri/amd-gpu:/dev/dri/nvidia-gpu
--- hl.env("AQ_DRM_DEVICES", "/dev/dri/amd-gpu:/dev/dri/nvidia-gpu")
-hl.env("AQ_DRM_DEVICES", "/dev/dri/amd-gpu")
 --############################
 --## ENVIRONMENT VARIABLES ###
 --############################

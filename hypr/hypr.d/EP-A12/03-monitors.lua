@@ -1,10 +1,5 @@
 ---@module 'hl'
 
---###############
---## MONITORS ###
---###############
--- See https://wiki.hypr.land/Configuring/Monitors/
-
 hl.monitor({
 	output = "DP-2",
 	mode = "2560x1440@120",
@@ -17,7 +12,7 @@ hl.monitor({
 	mode = "2560x1440@120",
 	position = "0x0",
 	scale = 1,
-	transform = 2, -- upside down
+	transform = 2,
 })
 
 hl.monitor({
