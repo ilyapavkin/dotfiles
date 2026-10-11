@@ -13,11 +13,11 @@ return {
 					cpp = { "clang-format" },
 					lua = { "stylua" },
 					go = { "gofmt" },
-					javascript = { "prettierd", "eslint_d" },
-					javascriptreact = { "prettierd", "eslint_d" },
-					typescript = { "prettierd", "eslint_d" },
-					typescriptreact = { "prettierd", "eslint_d" },
-					json = { "prettierd", "eslint_d" },
+					javascript = { "prettierd" },
+					javascriptreact = { "prettierd" },
+					typescript = { "prettierd" },
+					typescriptreact = { "prettierd" },
+					json = { "prettierd" },
 				},
 				formatters = {
 					["clang-format"] = {
