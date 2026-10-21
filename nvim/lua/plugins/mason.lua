@@ -22,11 +22,6 @@ return {
 						},
 					},
 				},
-				ts_ls = {
-					on_attach = function(client, buffer)
-						require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)
-					end,
-				},
 			},
 		},
 		config = function(_, opts)
@@ -41,7 +36,7 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		config = true,
 		opts = {
-			ensure_installed = { "lua_ls", "cssls", "ts_ls", "eslint" },
+			ensure_installed = { "lua_ls", "cssls", "eslint" },
 		},
 	},
 	{

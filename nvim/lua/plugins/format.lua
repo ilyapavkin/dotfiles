@@ -27,8 +27,8 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>f", function()
-				require("conform").format({ bufnr = 0 })
-			end)
+				vim.lsp.buf.code_action()
+			end, { desc = "Show code actions" })
 		end,
 	},
 	{
