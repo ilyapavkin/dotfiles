@@ -8,9 +8,14 @@ local fileManager = "dolphin"
 local menu = "wofi"
 local menuExec = "wofi --show drun"
 local logoutMenu = "wlogout"
+local taskmanager = "tmog-task-manager"
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind("ALT + F4", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(logoutMenu))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("pgrep -x " .. menu .. " >/dev/null 2>&1 && killall " .. menu .. " || " .. menuExec))
+hl.bind(
+	mainMod .. " + R",
+	hl.dsp.exec_cmd("pgrep -x " .. menu .. " >/dev/null 2>&1 && killall " .. menu .. " || " .. menuExec)
+)
+hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd(taskmanager))
