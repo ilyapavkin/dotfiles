@@ -15,3 +15,5 @@
 !hypr/**
 !lazygit
 !lazygit/**
+!wofi
+!wofi/**
